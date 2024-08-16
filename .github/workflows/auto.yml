@@ -20,13 +20,14 @@ env:
 
 jobs:
   CheckIn:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-
+    runs:
+      using: 'node16'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
       - name: Run Project
         run: |
-          using: 'node16'
           cd workflows
           yarn
           yarn checkin
