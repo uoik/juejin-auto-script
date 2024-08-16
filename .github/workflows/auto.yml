@@ -26,6 +26,7 @@ jobs:
       - uses: actions/setup-node@v2
       - name: Run Project
         run: |
+          using: 'node16'
           cd workflows
           yarn
           yarn checkin
