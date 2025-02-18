@@ -32,9 +32,8 @@ jobs:
 
   KeepActive:
     runs-on: ubuntu-latest
-    if: >
-      github.event_name == 'schedule' &&
-      github.schedule == '30 22 * * 1'  # 仅在每周一运行
+    # 仅在周一按预定时间运行
+    if: github.event_name == 'schedule' && github.schedule == '30 22 * * 1'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
