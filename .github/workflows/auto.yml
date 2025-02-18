@@ -29,8 +29,8 @@ jobs:
           cd workflows
           yarn
           yarn checkin
-  
-    KeepActive:
+
+  KeepActive:
     runs-on: ubuntu-latest
     if: >
       github.event_name == 'schedule' &&
